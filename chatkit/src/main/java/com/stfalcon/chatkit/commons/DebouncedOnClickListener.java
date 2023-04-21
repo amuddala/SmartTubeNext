@@ -39,6 +39,7 @@ public abstract class DebouncedOnClickListener implements View.OnClickListener {
         long currentTimestamp = SystemClock.uptimeMillis();
 
         if (previousClickTimestamp == null || Math.abs(currentTimestamp - previousClickTimestamp) > minimumIntervalMillis) {
+            System.out.println("anikethmuddala");
             onDebouncedClick(clickedView);
             lastClickMap.put(clickedView, currentTimestamp);
         }
